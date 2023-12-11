@@ -24,12 +24,12 @@ pipeline {
         sh 'mvn test'
       }
     }
-    // stage('Build Docker Image') {
-    //   agent any
-    //   steps {
-    //     sh 'docker image build -t myhello .'
-    //   }
-    // }
+    stage('Build Docker Image') {
+      agent any
+      steps {
+        sh 'docker image build -t myhello .'
+      }
+    }
     // stage('Tag Docker Image') {
     //   agent any
     //   steps {
