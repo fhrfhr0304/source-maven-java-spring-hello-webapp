@@ -33,7 +33,7 @@ pipeline {
     stage('Tag Docker Image') {
       agent any
       steps {
-        sh 'docker image tag myhello rocks0304/myhello:$BUILD_NUMBER'
+        sh 'docker image tag myhello rocks0304/myhello:1.0'
         sh 'docker image tag myhello rocks0304/myhello:latest'
       }
     }
@@ -41,7 +41,7 @@ pipeline {
       agent any
       steps {
         withDockerRegistry(credentialsId: 'docker-hub-token', url: 'https://index.docker.io/v1/') {
-          sh 'docker image push rocks0304/myhello:$BUILD_NUMBER'
+          sh 'docker image push rocks0304/myhello:1.0'
 	        sh 'docker image push rocks0304/myhello:latest'
         }
       }
