@@ -41,7 +41,7 @@ spec:
     stage('Checkout') {
       steps {
         container('maven') {
-          git branch: 'main', url: '<URL>'
+          git branch: 'main', url: 'https://github.com/fhrfhr0304/source-maven-java-spring-hello-webapp.git'
         }
       }
     }
@@ -93,4 +93,3 @@ spec:
     }
   }
 }
-Github 푸시를 위한 인증 토큰 생성
