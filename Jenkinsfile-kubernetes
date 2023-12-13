@@ -62,7 +62,7 @@ spec:
     stage('Build & Tag & Push Docker Image') {
       steps {
         container('kaniko') {
-          sh 'executor --context=dir:///home/jenkins/agent/workspace/kube_pipeline/ --destination=<IMAGE>:$BUILD_NUMBER --destination=<IMAGE>:latest'
+          sh 'executor --context=dir:///home/jenkins/agent/workspace/kube_pipeline/ --destination=rocks0304/myappp:$BUILD_NUMBER --destination=rocks0304/myappp:latest'
         }
       }
     }
@@ -71,7 +71,7 @@ spec:
         githubUser = 'fhrfhr0304' //Ryan Jang
         githubEmail = 'rocks0304rocks@gmail.com' //c1t1d0s7@example.com
         githubId = 'fhrfhr0304' //c1t1d0s7 
-        githubRepo = 'fhrfhr0304' //jenkins-kube-deploy
+        githubRepo = 'kubeargo' //jenkins-kube-deploy
         githubURL = "https://github.com/${githubId}/${githubRepo}.git"
         dockerhubId = 'rocks0304' //c1t1d0s7
         dockerhubRepo = 'hello' //hello-world
