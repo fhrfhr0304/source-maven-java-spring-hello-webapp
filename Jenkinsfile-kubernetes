@@ -35,7 +35,7 @@ spec:
     stage('Checkout') {
       steps {
         container('maven') {
-          git branch: 'main', url: 'https://github.com/fhrfhr0304/cccr.git'
+          git branch: 'main', url: 'https://github.com/fhrfhr0304/source-maven-java-spring-hello-webapp.git'
         }
       }
     }
