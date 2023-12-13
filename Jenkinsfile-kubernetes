@@ -44,7 +44,7 @@ spec:
         container('maven') {
           sh 'mvn clean package -DskipTests=true'
         }
-      }
+      } 
     }
     stage('Test') {
       steps {
@@ -56,7 +56,7 @@ spec:
     stage('Build & Tag & Push Docker Image') {
       steps {
         container('kaniko') {
-          sh 'executor --context=dir://$WORKSPACE --destination=fhrfhr0304/myapp:$BUILD_NUMBER --destination=fhrfhr0304/myapp:latest'
+          sh 'executor --context=dir://$WORKSPACE --destination=rocks0304/myapp:$BUILD_NUMBER --destination=rocks0304/myapp:latest'
         }
       }
     }
